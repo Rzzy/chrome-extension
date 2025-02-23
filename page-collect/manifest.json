@@ -1,0 +1,59 @@
+{
+  "manifest_version": 3,
+  "name": "Page Collections",
+  "version": "1.0.0",
+  "description": "A basic example extension with only required keys",
+  "icons": {
+    "48": "images/icon.png",
+    "128": "images/icon.png"
+  },
+  "background": {
+    "service_worker": "js/background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "css": [
+        "css/content-css.css"
+      ],
+      "js": [
+        "js/inject-form.js",
+        "js/content-script.js"
+      ],
+      "all_frames": true,
+      "match_origin_as_fallback": false,
+      "match_about_blank": false,
+      "run_at": "document_start",
+      "world": "ISOLATED"
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "images/icon.png",
+      "24": "images/icon.png",
+      "32": "images/icon.png"
+    },
+    "default_title": "Click Me",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "notifications",
+    "webRequest",
+    "storage"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "js/inject.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}

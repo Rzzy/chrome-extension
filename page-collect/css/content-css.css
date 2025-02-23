@@ -1,0 +1,44 @@
+.chrome-page-collect-main{
+  position: fixed;
+  background: #fff;
+  z-index: 1000;
+  width: 800px;
+  min-height: 300px;
+  top:calc(50% - 150px);
+  left: calc(50% - 400px);
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+  z-index: 3000;
+  padding: 30px 20px;
+  border-radius: 3px;
+}
+.chrome-page-collect-item {
+  margin-bottom: 15px;
+}
+.chrome-page-collect-name{
+  width: 65px;
+  display: inline-block;
+  float: left;
+  line-height: 32px;
+}
+.chrome-page-collect-text,
+.chrome-page-collect-input {
+  display: inline-block;
+  line-height: 24px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 3px;
+  width: 680px!important;
+}
+.chrome-page-collect-button{
+  text-align: center;
+}
+.chrome-page-collect-button button{
+  line-height: 30px;
+  min-width: 80px;
+  font-size: 16px;
+  background: #409bba5e;
+  border: 0;
+  border-radius: 3px;
+  color: #333;
+  margin-right: 10px;
+}
